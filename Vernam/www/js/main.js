@@ -56,11 +56,11 @@ $(document).ready(function () {
             pairs[querystring[i].split('=')[0]] = parseInt(querystring[i].split('=')[1]);
         }
     }
-    var left = pairs['left'] || 0;
-    var right = pairs['right'] || 2;
+    var left = pairs['left'] || 1;
+    var right = pairs['right'] || 3;
     // load_ciphertext(0, 2);
     // load_ciphertext(1, 4);
     // load_ciphertext(3, 5);
-    load_ciphertext(left, right);
+    load_ciphertext(left - 1, right - 1);
     bind_decode();
 });
